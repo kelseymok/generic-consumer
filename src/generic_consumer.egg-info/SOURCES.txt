@@ -1,5 +1,7 @@
 README.md
 setup.py
+src/generic_consumer/__init__.py
+src/generic_consumer/consumer.py
 src/generic_consumer.egg-info/PKG-INFO
 src/generic_consumer.egg-info/SOURCES.txt
 src/generic_consumer.egg-info/dependency_links.txt

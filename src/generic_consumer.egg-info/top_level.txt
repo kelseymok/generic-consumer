@@ -1,1 +1,1 @@
-
+generic_consumer

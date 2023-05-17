@@ -9,7 +9,7 @@ with open('requirements.txt') as f:
 setup(
     name='generic_consumer',
     version='0.1.0',
-    description='Generic Kakfa Consumer',
+    description='Generic Kafka Consumer',
     author='Kelsey Mok',
     author_email='kelseymok@gmail.com',
     url='https://github.com/data-derp/generic_consumer',

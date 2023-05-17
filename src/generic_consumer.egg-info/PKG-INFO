@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: generic-consumer
 Version: 0.1.0
-Summary: Generic Kakfa Consumer
+Summary: Generic Kafka Consumer
 Home-page: https://github.com/data-derp/generic_consumer
 Author: Kelsey Mok
 Author-email: kelseymok@gmail.com
