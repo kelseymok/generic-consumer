@@ -17,12 +17,12 @@ def log_message_error(msg):
                      (msg.topic(), msg.partition(), msg.offset()))
     raise KafkaException(msg.error())
 
-def basic_consume_loop(consumer: Consumer, topics: List, consumer_status: ConsumerStatus, f: Callable):
+def basic_consume_loop(consumer: Consumer, topics: List, consumer_status: ConsumerStatus, f: Callable, messages_to_fetch: int=500, timeout: float=0.3):
     try:
         consumer.subscribe(topics)
         print("Start consuming loop for ", topics)
         while consumer_status.running:
-            raw_msgs = consumer.consume(num_messages=500, timeout=.3)
+            raw_msgs = consumer.consume(num_messages=messages_to_fetch, timeout=timeout)
             print(f"Length raw_msgs: {len(raw_msgs)}")
             msgs = list(filter(lambda msg: msg is not None, raw_msgs))
             print(f"Length msgs: {len(msgs)}")
