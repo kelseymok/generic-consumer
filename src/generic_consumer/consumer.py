@@ -35,10 +35,12 @@ def basic_consume_loop(consumer: Consumer, topics: List, consumer_status: Consum
                 log_message_error(errorMsg)
 
             print(len(okMessages))
-            for msg in okMessages:
-                print(msg)
-                decoded_message = msg.value().decode("utf-8")
-                f(decoded_message)
+
+            f([ msg.value().decode("utf-8") for msg in okMessages ])
+            # for msg in okMessages:
+            #     print(msg)
+            #     decoded_message = msg.value().decode("utf-8")
+            #     f(decoded_message)
 
         print("End consuming loop")
     except Exception as _:
